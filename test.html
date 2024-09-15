@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Symbol Information</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+.symbol-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+}
+
+.symbol-btn {
+  font-size: 48px;
+  line-height: 56px;
+  padding: 0;
+  border: none;
+  border-radius: 50%;
+  background-color: transparent;
+  color: #333;
+  cursor: pointer;
+  outline: none;
+}
+
+.symbol-btn:focus {
+  box-shadow: 0 0 0 3px rgba(51, 153, 255, 0.5);
+}
+
+button {
+  font-size: 16px;
+  line-height: 24px;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 4px;
+  background-color: #333;
+  color: #fff;
+  cursor: pointer;
+  outline: none;
+}
+
+button:hover {
+  background-color: #444;
+}
+  </style>
+</head>
+<body>
+  <div class="symbol-container">
+    <b class="symbol-btn" onclick="navigateToSymbolInfo('🌸')">🌸</b>
+    <!-- <button onclick="navigateToSymbolInfo('🌸')">know more</button> -->
+    <b class="symbol-btn" onclick="navigateToSymbolInfo('🌼')">🌼</b>
+  </div>
+  <script src="script3.js"></script>
+  <script>
+    function navigateToSymbolInfo(symbol) {
+  window.location.href = 'info2.html?symbol=' + encodeURIComponent(symbol);
+}
+  </script>
+</body>
+</html>
